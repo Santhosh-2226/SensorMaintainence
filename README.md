@@ -1,6 +1,6 @@
 Predictive Maintenance using Machine Learning
 
-Project Name: sensorMaintainence
+Project Name: SensorMaintainence
 
 This project aims to predict the maintenance needs of industrial sensors using machine learning techniques. By analyzing sensor data, the system can anticipate failures before they occur, minimizing downtime and reducing maintenance costs.
 
@@ -63,8 +63,8 @@ XGBoost           | 94%      | 0.92     | 0.96
 How to Run
 
 1. Clone the repository:
-   git clone https://github.com/Santhosh-2226/sensor<aintainence.git
-   cd sensorMaintainence
+   git clone https://github.com/Santhosh-2226/SensorMaintainence.git
+   cd SensorMaintainence
 
 2. (Optional) Create a virtual environment:
    python -m venv venv
