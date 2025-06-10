@@ -1,0 +1,30 @@
+import paho.mqtt.client as mqtt
+
+# Define the broker and port
+broker = "localhost"  # If you're running Mosquitto locally, use 'localhost' or '127.0.0.1'
+port = 1883  # Default MQTT port
+
+# Define the topic
+topic = "my/test/topic"
+
+# This function is called when a message is received
+def on_message(client, userdata, message):
+    print(f"Received message: {message.payload.decode()}")
+
+# Initialize MQTT client
+client = mqtt.Client()
+
+# Set the message handler function
+client.on_message = on_message
+
+# Connect to the broker
+client.connect(broker, port)
+
+# Subscribe to the topic
+client.subscribe(topic)
+
+# Print confirmation message
+print(f"Subscribed to {topic}. Waiting for messages...")
+
+# Start the loop to listen for messages
+client.loop_forever()
